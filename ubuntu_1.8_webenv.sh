@@ -3,9 +3,9 @@
  # Check if user is root
 [ $(id -u) != "0" ] && { echo "${CFAILURE}Error: You must be root to run this script${CEND}"; exit 1; }
  # Configure
-MYSQL_ROOT_PASSWORD="renrenbao@2018"
-MYSQL_NORMAL_USER="renrenbao"
-MYSQL_NORMAL_USER_PASSWORD="rrb@2018"
+MYSQL_ROOT_PASSWORD=""
+MYSQL_NORMAL_USER=""
+MYSQL_NORMAL_USER_PASSWORD=""
  # Check if password is defined
 if [[ "$MYSQL_ROOT_PASSWORD" == "" ]]; then
     echo "${CFAILURE}Error: MYSQL_ROOT_PASSWORD not define!!${CEND}";
