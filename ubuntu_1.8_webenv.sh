@@ -47,7 +47,7 @@ pv cifs-utils mcrypt bash-completion
  # Set My Timezone
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
  # Install PHP Stuffs
-apt-get install -y --allow \
+apt-get install -y --force-yes \
 php7.2-cli php7.2-dev \
 php7.2-pgsql php7.2-sqlite3 php7.2-gd \
 php7.2-curl php7.2-memcached \
@@ -65,7 +65,7 @@ sudo sed -i "s/display_errors = .*/display_errors = On/" /etc/php/7.2/cli/php.in
 sudo sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.2/cli/php.ini
 sudo sed -i "s/;date.timezone.*/date.timezone = PRC/" /etc/php/7.2/cli/php.ini
  # Install Nginx & PHP-FPM
-apt-get install -y --allow nginx php7.2-fpm
+apt-get install -y --force-yes nginx php7.2-fpm
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
  # Setup Some PHP-FPM Options
